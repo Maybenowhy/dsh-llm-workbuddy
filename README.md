@@ -41,6 +41,7 @@ WorkBuddy 使用自己的配置条目。升级后请完整退出并重新启动 
 `1.3.21` 适配桌面版 DSH `0.2.0-rc.2` 的模型调用、插件详情页认证设置和会话级凭证控件；
 同时保留旧版 DSH 的适配器调用路径，以及 `web` / `headless` Profile 的安装方式。
 桌面端已验证实际模型回复；旧版 Web/Headless 路径通过自动化检查，未在本次更新中重新实机调用。
+`1.4.0` 适配桌面版 DSH `0.2.1-rc.1`：插件自带的 `@earendil-works/pi-ai` 升到 1.3.0（与 `dsh-llm-pi-ai@0.2.1-rc.1` 一致），`dsh.engines.dsh` 与 peerDependencies 增加 `0.2.1-rc.1`；`0.2.0-rc.2` 及更早的内核请继续使用 1.3.21。pi-ai 1.3 仍在包根导出 `createProvider` 与原有 `api/*` 路径，因此本次无需改代码。
 桌面版同样保留内置 `llm-pi-ai`，由 WorkBuddy 插件使用自己的配置条目。
 在 `next` 上，命令行 `login` 只保存令牌；认证模式需在 WorkBuddy 模型卡片中选择
 “令牌登录”，不会再写入旧版 `settings.yaml`。`next` 的模型页通过插件扩展位显示
